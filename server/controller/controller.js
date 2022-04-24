@@ -43,7 +43,7 @@ exports.find = (req, res) => {
                     res.status(404).send({ message: "Not found user with id=" + id })
                 }
                 else {
-                    res.send(data)
+                    res.send(data);
                 }
             })
             .catch(err => {
@@ -63,12 +63,12 @@ exports.find = (req, res) => {
 
 // Update a identified user by user id
 exports.update = (req, res) => {
+    
+    // if the body is empty, return the following message
     if (!req.body) {
-        return res
-            .status(400)
-            .send({ message: "Data to update can not be empty" })
+        return res.status(400).send({ message: "Data to update can not be empty" });
     }
-
+    // destructuring the id
     const id = req.params.id;
     Userdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
         .then(data => {
