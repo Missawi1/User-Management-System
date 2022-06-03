@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const MONGO_URI =`mongodb://localhost/userdb`
+require('dotenv').config()
+const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost/userdb"
 const connectDB = async () => {
     try {
         // mongodb connection string
