@@ -12,7 +12,14 @@ A User Management System app to manage user and render them dynamically over web
 - Based on CRUD functionality
 - Used Nodejs, Expressjs, MongoDB, Ejs view engine
 - Used CSS for UI designing
+- 
+## Environment Variables
 
+To run this project, you will need to add the following environment variables to your .env file
+
+`PORT = 3000`
+
+`MONGO_URI = "mongodb://localhost/userdb"`
 
 ## Run Locally
 
