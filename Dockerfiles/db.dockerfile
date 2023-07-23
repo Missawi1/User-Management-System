@@ -1,4 +1,4 @@
-FROM mongodb:6.0.8
+FROM mongo:6.0.8
 EXPOSE 27017
 
 #Create a new database during container initialization
