@@ -7,7 +7,7 @@ WORKDIR  /home/node/app
 RUN apt-get update && apt-get install -y git
 
 ##Clone public git repository into this location
-RUN git clone https://github.com/Missawi1/User-Management-System.git .
+RUN git clone https://github.com/Missawi1/User-Management-System.git . && ls -la
 WORKDIR /app/User-Management-System
 RUN npm install
 ENV PORT=3000
