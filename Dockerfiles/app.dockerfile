@@ -7,10 +7,10 @@ WORKDIR  /home/node/app
 RUN apt-get update && apt-get install -y git
 
 ##Clone public git repository into this location
-RUN git clone https://github.com/Missawi1/User-Management-System.git . && cd User-Management-System
-
+RUN git clone https://github.com/Missawi1/User-Management-System.git .
+WORKDIR /app/User-Management-System
+RUN npm install
 ENV PORT=3000
 ENV MONGO_URI=mongodb://127.0.0.1/user_management_db
 EXPOSE 3000
-RUN npm install
 CMD [ "npm". "start" ]
