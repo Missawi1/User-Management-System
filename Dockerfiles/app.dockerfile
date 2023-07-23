@@ -11,4 +11,4 @@ RUN cd User-Management-System && npm install
 ENV PORT=3000
 ENV MONGO_URI=mongodb://127.0.0.1/user_management_db
 EXPOSE 3000
-CMD [ "npm". "start" ]
+CMD [ "npm", "start" ]
